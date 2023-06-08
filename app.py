@@ -13,7 +13,7 @@ import os
 
 # Sidebar contents
 with st.sidebar:
-    st.title('📄💬 PDF Chat App')
+    st.title('📄💬 PDFs Chat App')
     st.markdown('''
     ## About
     This app is an LLM-powered PDFs chatbot that works with your own personal data.

@@ -16,7 +16,7 @@ with st.sidebar:
     st.title('📄💬 PDF Chat App')
     st.markdown('''
     ## About
-    This app is an LLM-powered PDF chatbot that works with your own personal data.
+    This app is an LLM-powered PDFs chatbot that works with your own personal data.
     ## Built using:
     ### [Streamlit](https://streamlit.io/)
     ### [LangChain](https://python.langchain.com/)

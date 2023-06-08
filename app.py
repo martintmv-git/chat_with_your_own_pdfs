@@ -26,8 +26,7 @@ with st.sidebar:
     add_vertical_space(3)
     st.write('✳︎ Reach out. [@martintmv](https://martintomov.com)')
 
-load_dotenv()
-api_key = os.getenv('OPENAI_API_KEY')  # Load API key from environment variable
+api_key = st.secrets["OPENAI_API_KEY"]
  
 def main():
     st.header("Chat with your PDFs 💬")

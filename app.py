@@ -22,7 +22,8 @@ with st.sidebar:
     st.title('📄💬 PDFs Chat App')
     st.markdown('''
     ## About
-    This app is an LLM-powered PDFs chatbot that works with your own personal data.
+    This app is an LLM-powered PDFs chatbot that works with your own personal PDF files.
+    Upload a PDF and ask questions about it's content.
     ## Built using:
     ### [Streamlit](https://streamlit.io/)
     ### [LangChain](https://python.langchain.com/)
@@ -36,6 +37,9 @@ def main():
     st.header("Chat with your PDFs 💬")
 
     foot = f"""
+    <style>
+    .reportview-container .main footer {visibility: hidden;}
+    </style>
     <div style="
         position: fixed;
         bottom: 0;
@@ -45,10 +49,11 @@ def main():
         padding: 0px 0px;
         text-align: center;
     ">
-        <p>✳︎ Made by <a href='https://martintomov.com'>@martintmv</a></p>
+        <p>Made by <a href='https://martintomov.com'>@martintmv</a></p>
     </div>
     """
     st.markdown(foot, unsafe_allow_html=True)
+
 
  
     # upload a PDF file

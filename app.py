@@ -29,17 +29,30 @@ with st.sidebar:
     ### [OpenAI GPT LLM](https://platform.openai.com/docs/models)
 
     ''')
-    add_vertical_space(3)
-    st.write('✳︎ Reach out. [@martintmv](https://martintomov.com)')
 
 api_key = st.secrets["OPENAI_API_KEY"]
  
 def main():
     st.header("Chat with your PDFs 💬")
- 
+
+    foot = f"""
+    <div style="
+        position: fixed;
+        bottom: 0;
+        left: 30%;
+        right: 0;
+        width: 50%;
+        padding: 0px 0px;
+        text-align: center;
+    ">
+        <p>✳︎ Made by <a href='https://martintomov.com'>@martintmv</a></p>
+    </div>
+    """
+    st.markdown(foot, unsafe_allow_html=True)
+
  
     # upload a PDF file
-    pdf = st.file_uploader("Upload your file", type='pdf')
+    pdf = st.file_uploader("Upload your file", type='pdf', icon="📁")
  
     # st.write(pdf)
     if pdf is not None:
